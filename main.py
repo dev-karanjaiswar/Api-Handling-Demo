@@ -16,4 +16,20 @@ class product:
     def __str__(self):
         return f"{self.item} - ${self.price:.2f} (Qty: {self.quantity})"
     
+class customer:
+    name: str
+    email: str
+    phone: str
+    address: str
 
+    def __init__(self, name: str, email: str, phone: str, address: str):
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.address = address
+
+    def contact_info(self):
+        return f"Name: {self.name}, Email: {self.email}, Phone: {self.phone}, Address: {self.address}"
+    
+    def __str__(self):
+        return f"{self.name} - {self.email}"
